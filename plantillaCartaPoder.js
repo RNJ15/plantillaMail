@@ -1,6 +1,7 @@
 var enviarNot =document.getElementById("notificationI")
 enviarNot.addEventListener("click", function(){
-    var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+    
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
 var Obtenerfecha=new Date();
 var fecha =Obtenerfecha.getDate() + " de " + meses[Obtenerfecha.getMonth()] + " de " + Obtenerfecha.getFullYear()
 var pdf = new jsPDF("p", "pt", "letter");
@@ -44,5 +45,6 @@ pdf.fromHTML(
         pdf.save("Carta poder, persona física.pdf");
     }, margins
 );
-
+var URLactual = window.location;
+alert(URLactual);
 }, false);
